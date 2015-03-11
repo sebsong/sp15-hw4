@@ -1,0 +1,7 @@
+<h1>Look at all the dogs that are registered for our site! Join us!</h1>
+<h2>Dogs:</h2>
+<% @dogs.each do |dog| %>
+    <p>Name: <%= link_to dog.name, dog_path(dog) %></p>
+    <p>Age: <%= dog.age %>
+<% end %>
+<h3><%= link_to "New Dog", dogs_new_path %></h3>
